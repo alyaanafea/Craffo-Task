@@ -1,0 +1,101 @@
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  
+}
+.menu-ul li a::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  height: 1px;
+  width: 0;
+  left: 0;
+  bottom: -1px;
+}
+
+.menu-ul li a:hover::after {
+  width: 100%;
+  transition: 0.4s;
+}
+
+swiper-container {
+  width: 100%;
+  height: 43.97rem;
+  
+  
+  
+}
+
+swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  
+}
+
+swiper-slide img
+ {
+  object-fit: cover;
+  object-position: bottom;
+ width: 100%;
+ min-height: 43.97rem;
+ 
+  
+ 
+}
+/* .swiper-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  height: 100%;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  object-position: center; 
+}  */
+
+.custom-button {
+  position: relative;
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  background-color: rgb(243, 255, 52);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #000;
+  margin: 0.5rem;
+  overflow: hidden;
+}
+.custom-button:hover{
+  background-color: rgba(241, 255, 52, 0.603);
+  transition: .3s;
+}
+@keyframes fromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-from-bottom {
+  animation: fromBottom 1s ease-in-out forwards;
+}

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net//npm/swiper@11/swiper-element-bundle.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="relative">
+      <nav
+        class="flex w-full bg-[rgb(40,40,40)] text-white justify-between items-center px-10 fixed z-20"
+      >
+        <div
+          class="flex justify-center items-center gap-3 text-md lg:hidden text-lg"
+        >
+          <a><i class="fas fa-bars w-6 h-6" onclick="showSidebar()"></i></a>
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="w-24 py-6">
+          <a href="#"><img src="./Images/logo-focal.avif" alt="logo" /></a>
+        </div>
+        <ul
+          class="lg:flex justify-center items-center gap-5 text-md hidden menu-ul"
+        >
+          <li><a class="relative" href="#">Shop by Category</a></li>
+          <li><a class="relative" href="#">Shop by Device</a></li>
+          <li><a class="relative" href="#">Collections</a></li>
+          <li><a class="relative" href="#">Blog</a></li>
+        </ul>
+        <div class="lg:flex justify-center items-center gap-5 text-lg hidden">
+          <a href="#"><i class="fa-regular fa-envelope"></i></a>
+          <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+          <a href="#"><i class="fa-regular fa-user"></i></a>
+          <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+        </div>
+        <i
+          class="fa-solid fa-bag-shopping flex justify-center items-center text-md lg:hidden text-lg"
+        ></i>
+      </nav>
+<!-- sidebar -->
+      <div
+        class="sidebar z-[999] h-screen w-[65%] sm:w-[40%] md:w-[35%] lg:w-[20%] p-4 fixed bg-white shadow-md hidden justify-between items-start flex-col"
+      >
+        <ul
+          class="flex flex-col justify-center items-start gap-7 text-md menu-ul w-full"
+        >
+          <i
+            class="fas fa-times text-2xl pt-2 pl-2"
+            onclick="hideSidebar()"
+          ></i>
+          <li class="w-full">
+            <a class="w-full text-2xl" href="#">Shop by Category </a>
+          </li>
+          <li class="w-full text-2xl">
+            <a class="w-full" href="#">Shop by Device</a>
+          </li>
+          <li class="w-full text-2xl">
+            <a class="w-full" href="#">Collections</a>
+          </li>
+          <li class="w-full text-2xl"><a class="w-full" href="#">Blog</a></li>
+        </ul>
+        <div class="flex gap-4 justify-center items-center">
+          <i class="fas fa-user"></i>
+          <h3>Account</h3>
+        </div>
+      </div>
+    </header>
+
+    <!-- hero section -->
+    <section>
+      <div class="relative">
+        <swiper-container
+          id="mainSwiper"
+          class="mySwiper"
+          pagination="true"
+          pagination-clickable="true"
+          centered-slides="true"
+          autoplay-delay="3000"
+          autoplay-disable-on-interaction="false"
+        >
+          <swiper-slide class="">
+            <div class="relative">
+              <img src="./Images/heritage-lp-3.webp" alt="" class=" " />
+              <div
+                class="absolute top-[250px] lg:left-[100px] left-[25px] text-white z-10 flex flex-col justify-center gap-6 items-start"
+              >
+                <h4 class="text-sm font-semibold mb-3 animate-from-bottom">
+                  PREMIUM COLLECTION
+                </h4>
+                <h1
+                  class="lg:text-6xl text-4xl font-black text-start animate-from-bottom"
+                >
+                  THE HERITAGE<br />COLLECTION
+                </h1>
+                <div class="mt-4">
+                  <a href="#" class="custom-button animate-from-bottom"
+                    >LEARN MORE</a
+                  >
+                  <a href="#" class="custom-button animate-from-bottom">SHOP</a>
+                </div>
+              </div>
+            </div>
+          </swiper-slide>
+
+          <swiper-slide>
+            <div class="w-full overflow-clip">
+              <div class="w-full flex justify-center items-center">
+                <img
+                  src="./Images/sage1-desktop (1).webp"
+                  alt="slide"
+                  class="lg:block hidden"
+                />
+                <img
+                  src="./Images/sage2-desktop (1).webp"
+                  alt="slide"
+                  class=""
+                />
+              </div>
+              <div
+                class="text-white z-10 flex flex-col justify-center gap-4 items-center absolute right-[15%] md:right-[30%] top-[35%] lg:top-[25%] lg:right-[37%]"
+              >
+                <h4 class="text-sm font-semibold mb-3 animate-from-bottom">
+                  MEET THE
+                </h4>
+                <h1
+                  class="lg:text-6xl text-4xl font-black text-center animate-from-bottom"
+                >
+                  SAGE<br />COLLECTION
+                </h1>
+                <div class="mt-4">
+                  <a href="#" class="custom-button animate-from-bottom"
+                    >LEARN MORE</a
+                  >
+                </div>
+              </div>
+            </div>
+          </swiper-slide>
+
+          <swiper-slide>
+            <div class="relative">
+              <img src="./Images/tom-dixon-lp-tile-1.webp" alt="" class="" />
+              <div
+                class="absolute top-[250px] lg:left-[100px] left-[25px] text-white z-10 flex flex-col justify-center gap-6 items-start"
+              >
+                <h4 class="text-sm font-semibold mb-3 animate-from-bottom">
+                  COLLABORATION
+                </h4>
+                <h1
+                  class="lg:text-6xl text-4xl font-black text-start animate-from-bottom"
+                >
+                  NATIVE UNIUON X<br />TOM DIXON
+                </h1>
+                <div class="mt-4">
+                  <a href="#" class="custom-button animate-from-bottom"
+                    >LEARN MORE</a
+                  >
+                </div>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="relative w-full overflow-hidden">
+              <div class="w-full flex justify-center items-center">
+                <img
+                  src="./Images/jump1-desktop (1).webp"
+                  alt="slide"
+                  class="lg:block hidden"
+                />
+                <img
+                  src="./Images/jump2-desktop (1).webp"
+                  alt="slide"
+                  class=""
+                />
+              </div>
+              <div
+                class="text-white z-10 flex flex-col justify-center gap-4 items-center absolute right-[15%] md:right-[30%] top-[35%] lg:top-[25%] lg:right-[37%]"
+              >
+                <h4 class="text-sm font-semibold mb-3 animate-from-bottom">
+                  CHARGE ANYWHERE ANYTIME
+                </h4>
+                <h1
+                  class="lg:text-6xl text-4xl font-black text-center animate-from-bottom"
+                >
+                  NEW JUMP +<br />POWERBANK
+                </h1>
+                <div class="mt-4">
+                  <a href="#" class="custom-button animate-from-bottom"
+                    >LEARN MORE</a
+                  >
+                </div>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="relative">
+              <img src="./Images/mk-lp-tile-1.webp" alt="" class=" " />
+              <div
+                class="absolute top-[250px] lg:left-[100px] left-[25px] text-white z-10 flex flex-col justify-center gap-6 items-start"
+              >
+                <h4 class="text-sm font-semibold mb-3 animate-from-bottom">
+                  NEW IN
+                </h4>
+                <h1
+                  class="lg:text-6xl text-4xl font-black text-start animate-from-bottom"
+                >
+                  THE MALISUN X<br />KITSUNE KOLLAB
+                </h1>
+                <div class="mt-4">
+                  <a href="#" class="custom-button animate-from-bottom"
+                    >LEARN MORE</a
+                  >
+                </div>
+              </div>
+            </div>
+          </swiper-slide>
+        </swiper-container>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
